@@ -1,0 +1,37 @@
+[
+    {
+        "user": "user1",
+        "smart_card": "12345",
+        "pan_card": "122334455656",
+        "aadhar_card": "12345",
+        "mixed_card": "1234565612341223"
+    },
+    {
+        "user": "user1",
+        "smart_card": "12345",
+        "pan_card": "122334455656",
+        "aadhar_card": "87654e",
+        "mixed_card": "1234565687651223"
+    },
+    {
+        "user": "user1",
+        "smart_card": "7864763478",
+        "pan_card": "8478347",
+        "aadhar_card": "2384y2378",
+        "mixed_card": "7864834723848478"
+    },
+    {
+        "user": "user2",
+        "smart_card": "345",
+        "pan_card": "567",
+        "aadhar_card": "456",
+        "mixed_card": "345567456567"
+    },
+    {
+        "user": "user1",
+        "smart_card": "12312",
+        "pan_card": "123123",
+        "aadhar_card": "23123",
+        "mixed_card": "1231312323121231"
+    }
+]
