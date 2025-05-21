@@ -71,13 +71,14 @@
 <body>
     <h1>Stored Cards</h1>
     <table>
-        <tr><th>User</th><th>Smart Card</th><th>PAN</th><th>Aadhar</th><th>Mixed</th></tr>
+        <tr><th>User</th><th>Smart Card</th><th>PAN</th><th>Aadhar</th><th>license</th><th>Mixed</th></tr>
         {% for c in cards %}
         <tr>
             <td>{{ c.user }}</td>
             <td>{{ c.smart_card }}</td>
             <td>{{ c.pan_card }}</td>
             <td>{{ c.aadhar_card }}</td>
+            <td>{{ c.license }}</td>
             <td>{{ c.mixed_card }}</td>
         </tr>
         {% endfor %}
