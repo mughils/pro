@@ -1,0 +1,116 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<head><title>View Cards</title></head>
+<body>
+    <h1>Stored Cards</h1>
+    <table border="1">
+        <tr><th>User</th><th>Smart Card</th><th>PAN</th><th>Aadhar</th><th>Mixed</th></tr>
+        {% for c in cards %}
+        <tr>
+            <td>{{ c.user }}</td>
+            <td>{{ c.smart_card }}</td>
+            <td>{{ c.pan_card }}</td>
+            <td>{{ c.aadhar_card }}</td>
+            <td>{{ c.mixed_card }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Cards</title>
+    <style>
+             
+       
+        a {
+             color: rgb(10, 10, 10);
+             text-decoration: none;
+             }
+        a:hover{
+            color: rgb(146, 10, 173);
+        }     
+
+        body {
+            font-family: Arial, sans-serif;
+            background: hsla(283, 43%, 40%, 0.432);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #34026d;
+            margin-bottom: 30px;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #070707;
+            color: white;
+        }
+
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<h1>Admin Dashboard</h1>
+    {% if session['role'] == 'admin' %}
+    <a href="{{ url_for('admin_dashboard') }}"> MY FILOCKER SYSTEM</a>
+{% endif %}
+
+    
+    <table>
+        
+        {% for user in users %}
+        <tr>
+           
+            
+            <td>{{ user.username }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Uploaded Documents</h2>
+    <table>
+        <tr>
+            <th>User</th>
+            <th>Ration Card</th>
+            <th>PAN Card</th>
+            <th>Aadhar Card</th>
+            <th>License Card</th>
+        </tr>
+        {% for card in cards %}
+        <tr>
+            <td>{{ card.user }}</td>
+            <td><a href="/{{ card.smart_card }}" target="_blank">View</a></td>
+            <td><a href="/{{ card.pan_card }}" target="_blank">View</a></td>
+            <td><a href="/{{ card.aadhar_card }}" target="_blank">View</a></td>
+            <td><a href="/{{ card.license_card }}" target="_blank">View</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
